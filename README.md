@@ -27,9 +27,9 @@ R5 recebe R4 após uma rotação com extensão de 1 bit para a direita, (comando
 
 MOV R5, R4, RRX -> Saída: 0x0000'00aa
 
-->> Na segunda etapa trocamos o comando MOV para o comando MVN, que tem como funcionalidade negar bit a bit nos valores, portanto: 
+->> Na segunda etapa trocamos o comando MOV para o comando MVN, que tem como funcionalidade negar bit a bit os valores, portanto: 
 
-
+#0x55 NEGADO:
 MVN R0, #0x55 -> Saída: 0xffff'ffaa
 
 Em seguida, o registrador R1 receberá o valor contido em R0 NEGADO deslocado à esquerda (<-) em 16 bits (comando LSL -> deslocamento a esquerda, #16 -> número de bits deslocados).
